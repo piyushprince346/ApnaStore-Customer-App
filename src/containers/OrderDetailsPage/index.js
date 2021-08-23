@@ -4,6 +4,7 @@ import { getOrder } from "../../actions";
 import Layout from "../../Components/Layout";
 import Card from "../../Components/UI/Card";
 import Price from "../../Components/UI/Price";
+import { api } from "../../urlConfig";
 
 import "./style.css";
 
@@ -87,7 +88,7 @@ const OrderDetailsPage = (props) => {
                     >
                         <div className="flexRow">
                             <div className="delItemImgContainer">
-                                <img src={item.productId.productPictures[0].img} alt="" />
+                                <img src={api + '/public/' + item.productId.productPictures[0].img} alt="" />
                             </div>
                             <div style={{ width: "250px" }}>
                                 <div className="delItemName">{item.productId.name}</div>
